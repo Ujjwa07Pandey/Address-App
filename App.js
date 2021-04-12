@@ -1,5 +1,4 @@
 import React from 'react';
-import type {Node} from 'react';
 import {
   SafeAreaView,
   ScrollView,
@@ -9,18 +8,15 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
+import {AppNavigator}  from './components/navigation/appNavigator';
+import { NavigationContainer } from '@react-navigation/native';
 
-
-const App: () => Node = () => {
+export default function App() {
   
   return (
-    <SafeAreaView>
-    <View>
-    <Text>
-    Hello
-    </Text>
-    </View>
-    </SafeAreaView>
+    <NavigationContainer>
+    <AppNavigator/>
+   </NavigationContainer>
   );
 };
 
@@ -43,4 +39,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+
